@@ -1,0 +1,27 @@
+# node_modules in frontend and backend
+/frontend/node_modules/
+backend/node_modules/
+
+# Build output folders
+/frontend/dist/
+/frontend/out-tsc/
+/backend/dist/
+/backend/build/
+
+# Angular cache
+/frontend/.angular/
+
+# Env files
+# frontend/.env
+# backend/.env
+
+# Logs
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
