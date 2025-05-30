@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <h3>All Policies</h3>
+
+  <table class="table table-striped mt-3" *ngIf="policies.length > 0; else noData">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Sum Assured</th>
+        <th>Modal Premium</th>
+        <th>Premium Frequency</th>
+        <th>PT</th>
+        <th>PPT</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let policy of policies; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ policy.dob | date: 'dd/mm/yyyy' }}</td>
+        <td>{{ policy.gender }}</td>
+        <td>{{ policy.sumAssured }}</td>
+        <td>{{ policy.modalPremium }}</td>
+        <td>{{ policy.premiumFrequency }}</td>
+        <td>{{ policy.pt }}</td>
+        <td>{{ policy.ppt }}</td>
+        <td>{{ policy.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noData>
+    <div class="alert alert-info">No policies found.</div>
+  </ng-template>
+</div>

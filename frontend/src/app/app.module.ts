@@ -5,10 +5,14 @@ import { AppComponent } from './app.component';
 import { LoginSignupComponent } from './auth/login-signup/login-signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterationComponent } from './components/registeration/registeration.component';
+import { SummaryComponent } from './components/summary/summary.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    RegisterationComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

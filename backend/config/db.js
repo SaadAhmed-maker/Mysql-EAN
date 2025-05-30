@@ -1,4 +1,4 @@
-// config/db.js
+
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 
@@ -13,9 +13,9 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error('❌ MySQL connection error:', err.message);
+    console.error(' MySQL connection error:', err.message);
   } else {
-    console.log('✅ Connected to MySQL');
+    console.log(' Connected to MySQL');
   }
 });
 

@@ -1,48 +1,60 @@
 <div class="custom-container">
-
+  <!-- <div class=""></div> -->
+  
   <!-- Bind the whole form -->
-  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+   <div class="">
+    <div class="text-center">
 
-    <!-- Email field -->
-    <div class="mb-3">
-      <label class="form-label" for="email">Email address</label>
-      <input
-        id="email"
-        type="email"
-        class="form-control"
+      <label class="styled-label" for="">{{formType}}</label>
+    </div>
+     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+       
+       <!-- Email field -->
+       <div class="mb-3">
+         <label class="form-label" for="email">Email address</label>
+         <input
+         id="email"
+         type="email"
+         class="form-control"
         formControlName="email"
         aria-describedby="emailHelp"
-      />
-      <div id="emailHelp" class="form-text">
-        We'll never share your email with anyone else.
-      </div>
-
-      <!-- Validation message -->
-      <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid"
-           class="text-danger small">
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+        
+        <!-- Validation message -->
+        <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid"
+        class="text-danger small">
         Please enter a valid email.
       </div>
     </div>
-
+    
     <!-- Password field -->
     <div class="mb-3">
       <label class="form-label" for="password">Password</label>
       <input
-        id="password"
-        type="password"
-        class="form-control"
+      id="password"
+      type="password"
+      class="form-control"
         formControlName="password"
       />
-
+      
       <!-- Validation message -->
       <div *ngIf="myForm.get('password')?.touched && myForm.get('password')?.invalid"
-           class="text-danger small">
-        Password is required.
-      </div>
+      class="text-danger small">
+      Password is required.
     </div>
+    </div>
+    <div class="d-flex">
 
-    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">
-      Submit
-    </button>
+      <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">
+        Submit
+      </button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="loginFunc()">
+        {{ accountNotifier }}
+      </button>
+    </div>
   </form>
+</div>
 </div>
